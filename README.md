@@ -57,7 +57,7 @@ GibsonAI/Memori,Python,"Open-Source Memory Engine for LLMs...",https://github.co
 1. **克隆仓库**
 
 ```bash
-git clone https://github.com/yourusername/github-star-tracker.git
+git clone https://github.com/cksdz1007/github-star-tracker.git
 cd github-star-tracker
 ```
 
