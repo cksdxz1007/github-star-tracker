@@ -24,13 +24,15 @@
 
 ## 📊 输出示例
 
-### CSV数据导出 (`csv_output/github_stars_YYYYMMDD.csv`):
+### CSV数据导出 (`csv_output/github_stars_YYYYMMDD.csv`)
+
 ```csv
 仓库名,编程语言,项目描述,仓库链接,Star数,最近更新日期,沉寂天数,年提交数,最近更新内容
 GibsonAI/Memori,Python,"Open-Source Memory Engine for LLMs...",https://github.com/GibsonAI/Memori,8518,2025-11-24,6,298,Clarify beta testing program details...
 ```
 
-### AI分析报告 (`reports/analysis_report_YYYYMMDD.md`):
+### AI分析报告 (`reports/analysis_report_YYYYMMDD.md`)
+
 ```markdown
 # GitHub Star 项目资产健康度分析报告
 
@@ -53,12 +55,14 @@ GibsonAI/Memori,Python,"Open-Source Memory Engine for LLMs...",https://github.co
 ### 快速开始
 
 1. **克隆仓库**
+
 ```bash
 git clone https://github.com/yourusername/github-star-tracker.git
 cd github-star-tracker
 ```
 
 2. **安装依赖**
+
 ```bash
 # 使用uv (推荐)
 uv sync
@@ -68,6 +72,7 @@ pip install -r requirements.txt
 ```
 
 3. **配置环境变量**
+
 ```bash
 # 复制环境变量模板
 cp .env.example .env
@@ -76,6 +81,7 @@ cp .env.example .env
 ```
 
 4. **配置 .env 文件**
+
 ```bash
 # ============== GitHub 配置 ==============
 GITHUB_TOKEN=ghp_your_github_personal_access_token
@@ -90,14 +96,16 @@ LLM_MODEL_NAME=deepseek-chat
 ### API密钥配置
 
 **GitHub Token:**
-1. 访问 https://github.com/settings/tokens
+
+1. 访问 <https://github.com/settings/tokens>
 2. 点击 "Generate new token (classic)"
 3. 选择权限: `public_repo`
 4. 复制生成的token
 
 **OpenAI/DeepSeek API Key:**
-- OpenAI: https://platform.openai.com/api-keys
-- DeepSeek: https://platform.deepseek.com
+
+- OpenAI: <https://platform.openai.com/api-keys>
+- DeepSeek: <https://platform.deepseek.com>
 
 ### 运行
 
@@ -282,6 +290,7 @@ uv run mypy src/
 
 **问题**: 即使配置了.env文件仍然报错
 **解决**: 检查系统环境变量是否与.env冲突:
+
 ```bash
 unset GITHUB_TOKEN && unset OPENAI_API_KEY && uv run python main.py
 ```
@@ -294,6 +303,7 @@ unset GITHUB_TOKEN && unset OPENAI_API_KEY && uv run python main.py
 ## 📈 更新日志
 
 ### v2.0 (2025-12-01) - 模块化重构
+
 - ✨ 新增模块化架构
 - ✨ 新增编程语言分析
 - ✨ 新增README提取和总结
@@ -303,6 +313,7 @@ unset GITHUB_TOKEN && unset OPENAI_API_KEY && uv run python main.py
 - ✨ 提升代码可维护性和可测试性
 
 ### v1.0 (2025-12-01) - 初始版本
+
 - ✨ 获取GitHub starred仓库
 - ✨ AI分析报告生成
 - ✨ CSV和Markdown导出
@@ -325,5 +336,5 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 
 **⭐ 如果这个项目对你有帮助，请给个Star支持一下！**
 
-📧 联系方式: your-email@example.com
-🐛 问题反馈: [GitHub Issues](https://github.com/yourusername/github-star-tracker/issues)
+📧 联系方式: <your-email@example.com>
+🐛 问题反馈: [GitHub Issues](https://github.com/cksdz1007/github-star-tracker/issues)
