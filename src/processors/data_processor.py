@@ -50,7 +50,14 @@ class DataProcessor:
                 "最近更新日期": repo._format_date(repo.pushed_at),
                 "沉寂天数": days_inactive,
                 "年提交数": commits_last_year,
-                "最近更新内容": last_msg
+                "最近更新内容": last_msg,
+                "仓库状态": repo._get_status(),
+                "项目年龄": repo._calculate_project_age(),
+                "关注者数": repo.watchers_count,
+                "订阅者数": repo.subscribers_count,
+                "Fork数": repo.forks_count,
+                "开放Issues": repo.open_issues_count,
+                "项目标签": ", ".join(repo.topics) if repo.topics else "无",
             })
 
         return processed_data
