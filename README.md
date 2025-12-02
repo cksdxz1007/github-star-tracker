@@ -80,7 +80,7 @@ GibsonAI/Memori,Python,"Open-Source Memory Engine for LLMs...",https://github.co
 1. **克隆仓库**
 
 ```bash
-git clone https://github.com/cksdz1007/github-star-tracker.git
+git clone https://github.com/cksdxz1007/github-star-tracker.git
 cd github-star-tracker
 ```
 
@@ -375,4 +375,4 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 **⭐ 如果这个项目对你有帮助，请给个Star支持一下！**
 
 📧 联系方式: <your-email@example.com>
-🐛 问题反馈: [GitHub Issues](https://github.com/cksdz1007/github-star-tracker/issues)
+🐛 问题反馈: [GitHub Issues](https://github.com/cksdxz1007/github-star-tracker/issues)
