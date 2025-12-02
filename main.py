@@ -72,8 +72,10 @@ def main():
 
         # 3.4 生成分析报告
         print(f"\n🧠 [步骤 4/4] 正在通过 LLM 生成智能分析报告...")
-        print("   - 分析活跃项目和停滞项目")
-        print("   - 生成健康度评分和技术建议")
+        print("   - 分析活跃项目 (近6个月内更新)")
+        print("   - 分析沉寂项目 (6个月-1年未更新)")
+        print("   - 分析长期沉寂项目 (超过1年未更新)")
+        print("   - 生成健康度评分、风险评估和行动计划")
 
         import pandas as pd
         df = pd.DataFrame(processed_data)

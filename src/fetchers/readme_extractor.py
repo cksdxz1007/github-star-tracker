@@ -42,8 +42,8 @@ class ReadmeExtractor:
         # 提取前1500个字符作为参考文本
         summary_text = readme_content[:1500]
 
-        # 构建总结提示
-        summary_prompt = f"""
+        # 构建总结提示模板
+        summary_prompt_template = """
         请阅读以下GitHub项目的README内容，用1-2句话总结这个项目的主要用途和功能。
         要求：
         1. 语言简洁明了，突出项目核心功能
@@ -65,8 +65,9 @@ class ReadmeExtractor:
                 openai_api_base=self.settings.openai_api_base
             )
 
-            chain = summary_prompt | summary_llm | StrOutputParser()
-            result = chain.invoke({})
+            prompt = PromptTemplate.from_template(summary_prompt_template)
+            chain = prompt | summary_llm | StrOutputParser()
+            result = chain.invoke({"summary_text": summary_text})
 
             if result and len(result.strip()) > 5:
                 return result.strip()
